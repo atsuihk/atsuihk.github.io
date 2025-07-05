@@ -69,10 +69,11 @@
 </footer>
 
 <script>
-    async function fetchAndPopulateTable() {
+    async function fetchAndPopulateTable(excelUrl, tableBodyID) {
     try {
         // Replace with your GitHub-hosted Excel file URL
-        const excelUrl = 'https://raw.githubusercontent.com/atsuihk/atsuihk.github.io/main/demos.xlsx';
+        // const excelUrl = 'https://raw.githubusercontent.com/atsuihk/atsuihk.github.io/main/demos.xlsx';
+
         const response = await fetch(excelUrl);
         if (!response.ok) throw new Error('Failed to fetch Excel file');
         const arrayBuffer = await response.arrayBuffer();
@@ -81,7 +82,7 @@
         const sheet = workbook.Sheets[sheetName];
         const data = XLSX.utils.sheet_to_json(sheet);
 
-        const tableBody = document.getElementById('demo-table-body');
+        const tableBody = document.getElementById(tableBodyID); // Change to get the tableID by calling this function
         tableBody.innerHTML = ''; // Clear any existing rows
 
         data.forEach(row => {
@@ -105,7 +106,13 @@
     }
 
     // Load table data when the page loads
-    window.onload = fetchAndPopulateTable;
+    window.onload = function() {
+        const xlsxlink = ['https://raw.githubusercontent.com/atsuihk/atsuihk.github.io/main/demos.xlsx', 'https://raw.githubusercontent.com/atsuihk/atsuihk.github.io/main/demos2.xlsx']
+        const tablebody_id = ['demo-table-body', 'demo-table-body2']
+        for (let i = 0; i < length(xlsxlink); i++) {
+            fetchAndPopulateTable(xlsxlink[i], tablebody_id[i])
+        }
+    };
 </script>
 </body>
 </html>
