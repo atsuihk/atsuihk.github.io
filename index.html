@@ -1,7 +1,70 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>atsui's personal webpage</h1>
-<p>Some feature demos will be available. ：）</p>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Personal Website</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+  <!-- Header -->
+  <header class="bg-blue-600 text-white py-6">
+    <div class="container mx-auto px-4">
+      <h1 class="text-3xl font-bold">Welcome to My Personal Website</h1>
+      <p class="mt-2">A place to showcase my work and story</p>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section class="container mx-auto px-4 py-12">
+    <h2 class="text-2xl font-semibold mb-4">About Me</h2>
+    <p class="text-gray-700">
+      Add your personal description here. Share your background, interests, or anything you'd like visitors to know about you.
+    </p>
+  </section>
+
+  <!-- Demos Section -->
+  <section class="container mx-auto px-4 py-12 bg-white">
+    <h2 class="text-2xl font-semibold mb-6">My Demos</h2>
+    <table class="w-full table-auto border-collapse">
+      <thead>
+        <tr class="bg-gray-200">
+          <th class="px-4 py-2 text-left">Picture</th>
+          <th class="px-4 py-2 text-left">Demo Title</th>
+          <th class="px-4 py-2 text-left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="border-b">
+          <td class="px-4 py-4">
+            <img src="https://via.placeholder.com/150" alt="Demo 1" class="w-32 h-32 object-cover rounded">
+          </td>
+          <td class="px-4 py-4 font-medium">Demo Title 1</td>
+          <td class="px-4 py-4">Add a description for your first demo here. Explain what it does or why it's special.</td>
+        </tr>
+        <tr class="border-b">
+          <td class="px-4 py-4">
+            <img src="https://via.placeholder.com/150" alt="Demo 2" class="w-32 h-32 object-cover rounded">
+          </td>
+          <td class="px-4 py-4 font-medium">Demo Title 2</td>
+          <td class="px-4 py-4">Add a description for your second demo here. Highlight its features or purpose.</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-4">
+            <img src="https://via.placeholder.com/150" alt="Demo 3" class="w-32 h-32 object-cover rounded">
+          </td>
+          <td class="px-4 py-4 font-medium">Demo Title 3</td>
+          <td class="px-4 py-4">Add a description for your third demo here. Share its significance or functionality.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
