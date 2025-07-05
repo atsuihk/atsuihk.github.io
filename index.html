@@ -61,6 +61,8 @@
         const sheet = workbook.Sheets[sheetName];
         const data = XLSX.utils.sheet_to_json(sheet);
 
+        console.log(data) // Show the data
+
         const tableBody = document.getElementById('demo-table-body');
         tableBody.innerHTML = ''; // Clear any existing rows
 
@@ -75,6 +77,11 @@
             <td class="px-4 py-4">${row.Description || 'No description available'}</td>
         `;
         tableBody.appendChild(tr);
+        
+        console.log(row['Demo Title'])
+        console.log(row.Picture)
+        console.log(row.Description)
+        
         });
     } catch (error) {
         console.error('Error loading Excel file:', error);
