@@ -109,7 +109,7 @@
     window.onload = function() {
         const xlsxlink = ['https://raw.githubusercontent.com/atsuihk/atsuihk.github.io/main/demos.xlsx', 'https://raw.githubusercontent.com/atsuihk/atsuihk.github.io/main/demos2.xlsx']
         const tablebody_id = ['demo-table-body', 'demo-table-body2']
-        for (let i = 0; i < length(xlsxlink); i++) {
+        for (let i = 0; i < xlsxlink.length; i++) {
             fetchAndPopulateTable(xlsxlink[i], tablebody_id[i])
         }
     };
