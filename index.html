@@ -81,8 +81,6 @@
         const sheet = workbook.Sheets[sheetName];
         const data = XLSX.utils.sheet_to_json(sheet);
 
-        console.log(data) // Show the data
-
         const tableBody = document.getElementById('demo-table-body');
         tableBody.innerHTML = ''; // Clear any existing rows
 
@@ -91,16 +89,12 @@
         tr.className = 'border-b';
         tr.innerHTML = `
             <td class="px-4 py-4">
-            <img width="800" height="500" src="${row.Picture || 'https://via.placeholder.com/150'}" alt="${row['Demo Title'] || 'Demo'}" class="w-32 h-32 object-cover rounded">
+            <img width="800" height="500" src="${row.Picture || 'https://via.placeholder.com/150'}" alt="${row['Demo Title'] || 'Demo'}">
             </td>
             <td class="px-4 py-4 font-medium"><a href=${row.Link}>${row['Demo Title']}</a></td>
             <td class="px-4 py-4">${row.Description || 'No description available'}</td>
         `;
         tableBody.appendChild(tr);
-        
-        console.log(row['Demo Title'])
-        console.log(row.Picture)
-        console.log(row.Description)
 
         });
     } catch (error) {
