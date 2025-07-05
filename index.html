@@ -43,10 +43,28 @@
     </table>
 </section>
 
+<section class="container mx-auto px-4 py-12 bg-white">
+    <h2 class="text-2xl font-semibold mb-6">My Demos with ArcPy</h2>
+    <h4 class="text-1l">To further calculate and dig deeper into the issue, automation from programming is required. Following is some fun Python script for you to take a look. </h2>
+    <table id="demo-table2" class="w-full table-auto border-collapse">
+    <thead>
+        <tr class="bg-gray-200">
+        <th class="px-4 py-2 text-left">Picture</th>
+        <th class="px-4 py-2 text-left">Demo Title</th>
+        <th class="px-4 py-2 text-left">Description</th>
+        </tr>
+    </thead>
+    <tbody id="demo-table-body2">
+        <!-- Table rows will be populated dynamically -->
+    </tbody>
+    </table>
+</section>
+
+
 <!-- Footer -->
 <footer class="bg-gray-800 text-white py-6">
     <div class="container mx-auto px-4 text-center">
-    <p>© 2025 Your Name. All rights reserved.</p>
+    <p>© 2025 atsuihk. All rights reserved.</p>
     </div>
 </footer>
 
@@ -73,7 +91,7 @@
         tr.className = 'border-b';
         tr.innerHTML = `
             <td class="px-4 py-4">
-            <img src="${row.Picture || 'https://via.placeholder.com/150'}" width="800px" height="500px" alt="${row['Demo Title'] || 'Demo'}" class="w-32 h-32 object-cover rounded">
+            <img src="${row.Picture || 'https://via.placeholder.com/150'}" alt="${row['Demo Title'] || 'Demo'}" class="w-32 h-32 object-cover rounded">
             </td>
             <td class="px-4 py-4 font-medium"><a href=${row.Link}>${row['Demo Title']}</a></td>
             <td class="px-4 py-4">${row.Description || 'No description available'}</td>
