@@ -52,7 +52,7 @@
     async function fetchAndPopulateTable() {
     try {
         // Replace with your GitHub-hosted Excel file URL
-        const excelUrl = 'https://raw.githubusercontent.com/atsuihk/your-repo/main/demos.xlsx';
+        const excelUrl = 'demos.xlsx';
         const response = await fetch(excelUrl);
         if (!response.ok) throw new Error('Failed to fetch Excel file');
         const arrayBuffer = await response.arrayBuffer();
